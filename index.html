@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barrier Blueprint Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-section">
+        <div class="logo-section">
+        <img src="Logo.jpeg" alt="Simply Complex Africa Logo" class="logo-image" />
+        </div>
+        <div class="logo-text">
+          <h2>Barrier</h2>
+          <p>Blueprint Tracker</p>
+        </div>
+      </div>
+
+      <ul class="nav">
+        <li class="active" data-page="dashboard">
+          <span class="icon">🏠</span> Dashboard
+        </li>
+        <li data-page="idea-repo">
+          <span class="icon">💡</span> Idea Repository
+        </li>
+        <li data-page="ai-insights">
+          <span class="icon">🤖</span> AI Insights
+        </li>
+        <li data-page="stakeholder-map">
+          <span class="icon">🗺️</span> Stakeholder Map
+        </li>
+        <li data-page="export-report">
+          <span class="icon">📊</span> Export Report
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Dashboard Page -->
+      <div id="dashboard" class="page active">
+        <h1 class="page-title">Dashboard</h1>
+
+        <div class="stats">
+          <div class="stat-card">
+            <h2>8</h2>
+            <p>Total Ideas</p>
+          </div>
+          <div class="stat-card">
+            <h2>5</h2>
+            <p>AI-Linked Ideas</p>
+          </div>
+          <div class="stat-card">
+            <h2>3</h2>
+            <p>Scaled Projects</p>
+          </div>
+        </div>
+
+        <div class="charts-section">
+          <h3>Ideas by Category</h3>
+          <div class="charts">
+            <canvas id="barChart"></canvas>
+            <canvas id="pieChart"></canvas>
+          </div>
+        </div>
+
+        <div class="featured-idea">
+          <h3>Featured Idea</h3>
+          <h2>AI Funding Platform</h2>
+          <p>💡 AI can match township entrepreneurs with investors faster.</p>
+        </div>
+      </div>
+
+      <!-- Other Pages -->
+      <div id="idea-repo" class="page">
+        <h1>Idea Repository</h1>
+        <p>Browse and manage your ideas here.</p>
+      </div>
+
+      <div id="ai-insights" class="page">
+        <h1>AI Insights</h1>
+        <p>AI-driven analytics and reports.</p>
+      </div>
+
+      <div id="stakeholder-map" class="page">
+        <h1>Stakeholder Map</h1>
+        <p>Visualize and connect key project stakeholders.</p>
+      </div>
+
+      <div id="export-report" class="page">
+        <h1>Export Report</h1>
+        <p>Generate and download PDF reports here.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
