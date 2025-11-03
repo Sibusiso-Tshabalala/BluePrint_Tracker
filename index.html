@@ -362,9 +362,344 @@
         </div>
       </div>
 
+      <!-- Stakeholder Map Page -->
       <div id="stakeholder-map" class="page">
-        <h1 class="animate__animated animate__fadeInDown">Stakeholder Map</h1>
-        <p>Visualize and connect key project stakeholders.</p>
+        <div class="stakeholder-header animate__animated animate__fadeInDown">
+          <h1>Stakeholder Ecosystem Map</h1>
+          <span class="ai-powered-badge">🤖 AI-Powered Network Analysis</span>
+        </div>
+
+        <!-- Stakeholder Network Visualization -->
+        <div class="stakeholder-network-container animate__animated animate__fadeInUp">
+          <div class="network-controls">
+            <div class="control-group">
+              <button class="control-btn active" data-filter="all">All Stakeholders</button>
+              <button class="control-btn" data-filter="corporate">🏢 Corporate</button>
+              <button class="control-btn" data-filter="investor">💰 Investors</button>
+              <button class="control-btn" data-filter="government">🏛️ Government</button>
+              <button class="control-btn" data-filter="community">👥 Community</button>
+            </div>
+            <div class="search-stakeholders">
+              <input type="text" placeholder="🔍 Search stakeholders..." id="stakeholderSearch">
+            </div>
+          </div>
+
+          <div class="network-visualization">
+            <!-- Central Idea Node -->
+            <div class="central-node" id="centralIdea">
+              <div class="node-content">
+                <h3>Intelligent Funding Platform</h3>
+                <p>AI-Powered Entrepreneur Matching</p>
+                <div class="node-stats">
+                  <span class="stat">🎯 92% Match</span>
+                  <span class="stat">🚀 High Impact</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Corporate Stakeholders -->
+            <div class="stakeholder-group corporate-group" data-type="corporate">
+              <div class="group-label">🏢 Corporate Partners</div>
+              
+              <div class="stakeholder-node corporate" data-id="mtn">
+                <div class="node-content">
+                  <h4>MTN Group</h4>
+                  <p>Mobile Infrastructure & Digital Payments</p>
+                  <div class="node-metrics">
+                    <div class="metric">
+                      <span class="label">Strategic Fit</span>
+                      <div class="score-bar">
+                        <div class="fill" style="width: 95%"></div>
+                      </div>
+                    </div>
+                    <div class="match-score">95% Match</div>
+                  </div>
+                </div>
+                <div class="connection-line"></div>
+              </div>
+
+              <div class="stakeholder-node corporate" data-id="vodacom">
+                <div class="node-content">
+                  <h4>Vodacom</h4>
+                  <p>Telecommunications & Connectivity</p>
+                  <div class="node-metrics">
+                    <div class="metric">
+                      <span class="label">Strategic Fit</span>
+                      <div class="score-bar">
+                        <div class="fill" style="width: 88%"></div>
+                      </div>
+                    </div>
+                    <div class="match-score">88% Match</div>
+                  </div>
+                </div>
+                <div class="connection-line"></div>
+              </div>
+
+              <div class="stakeholder-node corporate" data-id="safaricom">
+                <div class="node-content">
+                  <h4>Safaricom</h4>
+                  <p>M-PESA & Financial Services</p>
+                  <div class="node-metrics">
+                    <div class="metric">
+                      <span class="label">Strategic Fit</span>
+                      <div class="score-bar">
+                        <div class="fill" style="width: 92%"></div>
+                      </div>
+                    </div>
+                    <div class="match-score">92% Match</div>
+                  </div>
+                </div>
+                <div class="connection-line"></div>
+              </div>
+            </div>
+
+            <!-- Investor Stakeholders -->
+            <div class="stakeholder-group investor-group" data-type="investor">
+              <div class="group-label">💰 Investors</div>
+              
+              <div class="stakeholder-node investor" data-id="afdb">
+                <div class="node-content">
+                  <h4>African Development Bank</h4>
+                  <p>Development Funding & Grants</p>
+                  <div class="node-metrics">
+                    <div class="metric">
+                      <span class="label">Funding Potential</span>
+                      <div class="score-bar">
+                        <div class="fill" style="width: 90%"></div>
+                      </div>
+                    </div>
+                    <div class="match-score">90% Match</div>
+                  </div>
+                </div>
+                <div class="connection-line"></div>
+              </div>
+
+              <div class="stakeholder-node investor" data-id="vc4africa">
+                <div class="node-content">
+                  <h4>VC4Africa</h4>
+                  <p>Venture Capital & Startup Funding</p>
+                  <div class="node-metrics">
+                    <div class="metric">
+                      <span class="label">Funding Potential</span>
+                      <div class="score-bar">
+                        <div class="fill" style="width: 85%"></div>
+                      </div>
+                    </div>
+                    <div class="match-score">85% Match</div>
+                  </div>
+                </div>
+                <div class="connection-line"></div>
+              </div>
+
+              <div class="stakeholder-node investor" data-id="tony-foundation">
+                <div class="node-content">
+                  <h4>Tony Elumelu Foundation</h4>
+                  <p>Entrepreneurship Funding</p>
+                  <div class="node-metrics">
+                    <div class="metric">
+                      <span class="label">Funding Potential</span>
+                      <div class="score-bar">
+                        <div class="fill" style="width: 87%"></div>
+                      </div>
+                    </div>
+                    <div class="match-score">87% Match</div>
+                  </div>
+                </div>
+                <div class="connection-line"></div>
+              </div>
+            </div>
+
+            <!-- Government Stakeholders -->
+            <div class="stakeholder-group government-group" data-type="government">
+              <div class="group-label">🏛️ Government</div>
+              
+              <div class="stakeholder-node government" data-id="au">
+                <div class="node-content">
+                  <h4>AU Commission</h4>
+                  <p>Continental Policy & Coordination</p>
+                  <div class="node-metrics">
+                    <div class="metric">
+                      <span class="label">Policy Alignment</span>
+                      <div class="score-bar">
+                        <div class="fill" style="width: 82%"></div>
+                      </div>
+                    </div>
+                    <div class="match-score">82% Match</div>
+                  </div>
+                </div>
+                <div class="connection-line"></div>
+              </div>
+
+              <div class="stakeholder-node government" data-id="undp">
+                <div class="node-content">
+                  <h4>UNDP Africa</h4>
+                  <p>Development Programs & Support</p>
+                  <div class="node-metrics">
+                    <div class="metric">
+                      <span class="label">Policy Alignment</span>
+                      <div class="score-bar">
+                        <div class="fill" style="width: 88%"></div>
+                      </div>
+                    </div>
+                    <div class="match-score">88% Match</div>
+                  </div>
+                </div>
+                <div class="connection-line"></div>
+              </div>
+            </div>
+
+            <!-- Community Stakeholders -->
+            <div class="stakeholder-group community-group" data-type="community">
+              <div class="group-label">👥 Community</div>
+              
+              <div class="stakeholder-node community" data-id="andela">
+                <div class="node-content">
+                  <h4>Andela</h4>
+                  <p>Tech Talent Development</p>
+                  <div class="node-metrics">
+                    <div class="metric">
+                      <span class="label">Community Impact</span>
+                      <div class="score-bar">
+                        <div class="fill" style="width: 91%"></div>
+                      </div>
+                    </div>
+                    <div class="match-score">91% Match</div>
+                  </div>
+                </div>
+                <div class="connection-line"></div>
+              </div>
+
+              <div class="stakeholder-node community" data-id="innovation-hub">
+                <div class="node-content">
+                  <h4>Innovation Hubs Network</h4>
+                  <p>Local Ecosystem Partners</p>
+                  <div class="node-metrics">
+                    <div class="metric">
+                      <span class="label">Community Impact</span>
+                      <div class="score-bar">
+                        <div class="fill" style="width: 89%"></div>
+                      </div>
+                    </div>
+                    <div class="match-score">89% Match</div>
+                  </div>
+                </div>
+                <div class="connection-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI-Powered Stakeholder Insights -->
+        <div class="stakeholder-insights animate__animated animate__fadeInUp">
+          <h3>🤖 AI Stakeholder Analysis</h3>
+          <div class="insights-grid">
+            <div class="insight-card">
+              <div class="insight-header">
+                <h4>🎯 Top Strategic Partners</h4>
+                <span class="confidence">94% Confidence</span>
+              </div>
+              <div class="insight-content">
+                <div class="partner-rank">
+                  <div class="rank-item">
+                    <span class="rank">1</span>
+                    <span class="partner-name">MTN Group</span>
+                    <span class="partner-score">95%</span>
+                  </div>
+                  <div class="rank-item">
+                    <span class="rank">2</span>
+                    <span class="partner-name">Safaricom</span>
+                    <span class="partner-score">92%</span>
+                  </div>
+                  <div class="rank-item">
+                    <span class="rank">3</span>
+                    <span class="partner-name">African Development Bank</span>
+                    <span class="partner-score">90%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="insight-card">
+              <div class="insight-header">
+                <h4>📈 Engagement Strategy</h4>
+                <span class="confidence">89% Confidence</span>
+              </div>
+              <div class="insight-content">
+                <ul class="strategy-list">
+                  <li>• Approach corporate partners for pilot funding</li>
+                  <li>• Engage investors for scale-up capital</li>
+                  <li>• Secure government support for policy alignment</li>
+                  <li>• Partner with community for local implementation</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="insight-card">
+              <div class="insight-header">
+                <h4>🤝 Recommended Approach</h4>
+                <span class="confidence">91% Confidence</span>
+              </div>
+              <div class="insight-content">
+                <div class="approach-steps">
+                  <div class="step">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Initial meetings with top 3 corporate partners</span>
+                  </div>
+                  <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Develop joint pilot proposal</span>
+                  </div>
+                  <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Secure initial funding commitment</span>
+                  </div>
+                  <div class="step">
+                    <span class="step-number">4</span>
+                    <span class="step-text">Scale with investor backing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stakeholder Contact Management -->
+        <div class="contact-management animate__animated animate__fadeInUp">
+          <h3>📞 Contact & Engagement Tracker</h3>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-header">
+                <h4>MTN Group</h4>
+                <span class="engagement-level high">High Engagement</span>
+              </div>
+              <div class="contact-details">
+                <p><strong>Contact:</strong> Innovation Partnerships Director</p>
+                <p><strong>Status:</strong> Initial meeting scheduled</p>
+                <p><strong>Next Step:</strong> Present detailed proposal</p>
+              </div>
+              <div class="contact-actions">
+                <button class="action-btn primary">Log Interaction</button>
+                <button class="action-btn secondary">Schedule Meeting</button>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-header">
+                <h4>African Development Bank</h4>
+                <span class="engagement-level medium">Medium Engagement</span>
+              </div>
+              <div class="contact-details">
+                <p><strong>Contact:</strong> Private Sector Department</p>
+                <p><strong>Status:</strong> Proposal under review</p>
+                <p><strong>Next Step:</strong> Follow up in 2 weeks</p>
+              </div>
+              <div class="contact-actions">
+                <button class="action-btn primary">Log Interaction</button>
+                <button class="action-btn secondary">Schedule Meeting</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="export-report" class="page">
